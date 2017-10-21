@@ -1,0 +1,8 @@
+<template name="view3">
+  <view class='view3_main'>
+  <text class='title'>我记得矿泉水</text>
+  <text class='text_content'>我记得一天晚上，我想请你出去喝糖水，你没答应，你说你在外面。我就斗胆想让你帮我带瓶水回来，你答应了。我说带一瓶饮料就够了的，你却带了两瓶大瓶的，一个蜂蜜柚子茶一个矿泉水。你总是考虑如此周到。从此，矿泉水我只买这种矿泉水。</text>
+</view>
+<image src='https://ip.freep.cn/591638/kuangquanshui.png' mode='aspectFit' class='image'></image>
+
+</template>

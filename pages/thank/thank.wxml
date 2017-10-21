@@ -1,0 +1,15 @@
+<!--pages/thank/thank.wxml-->
+<view class='text_align_center' style='margin-top: 30px;'>
+<text class='block text'>柳柳</text>
+  <text animation='{{text1}}' style='opacity:0' class='block text'>我很开心</text>
+  <text animation='{{text2}}' style='opacity:0' class='block text'>你终于看到了</text>
+  <text animation='{{text3}}' style='opacity:0' class='block text'>这里面</text>
+  <text animation='{{text4}}' style='opacity:0' class='block text'>是一些我想对你说</text>
+  <text animation='{{text5}}' style='opacity:0' class='block text'>但终究没有说出口的话</text>
+  <text animation='{{text6}}' style='opacity:0' class='block text'>我只好在这里</text>
+  <text animation='{{text7}}' style='opacity:0' class='block text'>把这些话永远保留</text>
+  <text animation='{{text8}}' style='opacity:0' class='block text'>希望有一天</text>
+  <text animation='{{text9}}' style='opacity:0' class='block text'>你终会看到</text>
+  <text animation='{{text10}}' style='opacity:0' class='block text'>那么，开始吧</text>
+  <button animation='{{text11}}' style='opacity:0; width:50%; margin-top: 30px;' bindtap='into' type='primary'>进入</button>
+</view>

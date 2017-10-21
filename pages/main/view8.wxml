@@ -1,0 +1,8 @@
+<template name="view8">
+  <view class='view8_main'>
+  <text class='title'>我记得彩色铅笔</text>
+  <text class='text_content'>我记得我送给你的彩色铅笔。这一次你刚知道我又送东西给你的时候，你表现地没有上次那么开心了，我问你喜不喜欢，你回了一句挺漂亮的。你问我是不是问叶双才知道送这个，我发誓，我没问过叶双，我是靠我的敏锐的观察力发现的，你很喜欢画画，一回到宿舍就对着画纸描啊描的，也在微博上发动态。我一直没关注你的微博，我就怕你会反感我观察你的生活。我知道你喜欢画画后就觉得可以送你一套彩色铅笔，可惜我没有买48色的。</text>
+</view>
+<image src='https://ip.freep.cn/591638/qianbi.png' mode='aspectFit' class='image'></image>
+<image src='https://ip.freep.cn/591638/hua.png' mode='aspectFit' class='image'></image>
+</template>

@@ -1,0 +1,8 @@
+<template name="view9">
+  <view class='view9_main'>
+  <text class='title'>我记得书</text>
+  <text class='text_content'>我记得你分享给我你最喜欢的书，叫乖，摸摸头。那是在你一天都没理我的时候，晚上我忍不住了，才试探性地询问你。等了一个小时你没回应我我再问的时候，你终于说了。但言简意赅。书我看完了，真心喜欢。那本电子书一直保存在我手机里</text>
+</view>
+<image src='https://ip.freep.cn/591638/shu.jpg' mode='aspectFit' class='image'></image>
+<!-- <image src='../images/hua.png' mode='aspectFit' class='image'></image> -->
+</template>

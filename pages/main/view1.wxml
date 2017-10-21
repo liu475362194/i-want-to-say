@@ -1,0 +1,9 @@
+<template name="view1">
+
+<view class='main1_main'>
+  <text class='title'>我记得初次见面</text>
+  <text class='text_content'>第一天看见你是在旺哥宿舍打火锅。我记得我把白菜一叶一叶地剥下来，还被你责怪了一下，说我干嘛要这样搞，最后还是你洗的菜。还记得我坐在你后面一直被灌酒，你却从没回头一次。
+</text>
+<view class='move'>往右滑动查看更多</view>
+</view>
+</template>

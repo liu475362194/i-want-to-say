@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class='text'>
+    <text style='font-size: 30px; font-family: "黑体"; color: {{color}};'>{{text}}</text>
+  </view>
+
+  <view class="userinfo">
+    <view>
+      <button class='enter_bt' style='display: {{display}};' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type='primary'> 点击授权 </button>
+    </view>
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+  </view>
+</view>

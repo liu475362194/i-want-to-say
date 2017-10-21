@@ -1,0 +1,155 @@
+<!--pages/weather/weather.wxml-->
+<view class="weather_head">
+  <text class="weather_sswd">{{weatherxml.data.HeWeather5[0].now.tmp}}°</text>
+  <!--<image class="weather_tqtb" src="../../image/104.png"></image>-->
+  <block wx:if="{{weathersuccess}}">
+    <image src="../../image/{{weatherxml.data.HeWeather5[0].now.cond.code}}.png" mode="aspectFit" class="weather_tqtb"></image>
+  </block>
+  <block wx:else>
+    <image src="../../image/999.png" mode="aspectFit" class="weather_tqtb"></image>
+  </block>
+</view>
+<view class="weather_qihou">
+  <text class="weather_tqzk">{{weatherxml.data.HeWeather5[0].now.cond.txt}}</text>
+  <text class="weather_tqmax">{{weatherxml.data.HeWeather5[0].daily_forecast[0].tmp.max}}°/ {{weatherxml.data.HeWeather5[0].daily_forecast[0].tmp.min}}°C</text>
+  <!--<text>PM2.5{{weatherxml.data.data.HeWeather5[0].aqi.city.pm25}}</text>-->
+</view>
+
+<view class="more_day">
+  <view class="more_xiangqing">
+    <view class="more_dayone">
+      <text class="more_dayone_date">{{date[0]}}/{{date[1]}}</text>
+      <text class="more_dayone_weath">{{weatherxml.data.HeWeather5[0].daily_forecast[0].cond.txt_d}}</text>
+      <block wx:if="{{weathersuccess}}">
+        <image src="../../image/{{weatherxml.data.HeWeather5[0].daily_forecast[0].cond.code_d}}.png" mode="aspectFit" class="more_dayone_img"></image>
+      </block>
+      <block wx:else>
+        <image src="../../image/999.png" mode="aspectFit" class="more_dayone_img"></image>
+      </block>
+    </view>
+    <view class="more_daytwo">
+      <text class="more_dayone_date">{{date[2]}}/{{date[3]}}</text>
+      <text class="more_dayone_weath">{{weatherxml.data.HeWeather5[0].daily_forecast[1].cond.txt_d}}</text>
+      <block wx:if="{{weathersuccess}}">
+        <image src="../../image/{{weatherxml.data.HeWeather5[0].daily_forecast[1].cond.code_d}}.png" mode="aspectFit" class="more_dayone_img"></image>
+      </block>
+      <block wx:else>
+        <image src="../../image/999.png" mode="aspectFit" class="more_dayone_img"></image>
+      </block>
+    </view>
+    <view class="more_daythree">
+      <text class="more_dayone_date">{{date[4]}}/{{date[5]}}</text>
+      <text class="more_dayone_weath">{{weatherxml.data.HeWeather5[0].daily_forecast[2].cond.txt_d}}</text>
+      <block wx:if="{{weathersuccess}}">
+        <image src="../../image/{{weatherxml.data.HeWeather5[0].daily_forecast[2].cond.code_d}}.png" mode="aspectFit" class="more_dayone_img"></image>
+      </block>
+      <block wx:else>
+        <image src="../../image/999.png" mode="aspectFit" class="more_dayone_img"></image>
+      </block>
+    </view>
+  </view>
+  <canvas class="more_day_canvas" canvas-id="mcanvas"/>
+</view>
+
+<view class="pm25_view">
+  <image class="pm25_yezi" src="../../image/yezi.png"></image>
+  <view class="pm25_xinxi">
+    <text class="pm25_pm25t">PM2.5</text>
+    <text class="pm25_pm25s">{{weatherxml.data.HeWeather5[0].aqi.city.pm25}}</text>
+    <text class="pm25_kqzl">空气质量</text>
+    <text class="pm25_kqzlt">{{weatherxml.data.HeWeather5[0].aqi.city.qlty}}</text>
+    <view class="pm25_jindu">
+      <image class="pm25_jianbian" src="../../image/pm25.png"></image>
+      <image class="pm25_jiantou" style="left:{{baifenbi}};" mode="aspectFit" src="../../image/jiantou.png" animation="{{jiantouanim}}"></image>
+    </view>
+  </view>
+</view>
+<view class="shikuang">
+  <view class="suggestion">
+    <image class="image" mode="aspectFit" src="../../image/fengxiang.png"></image>
+    <text class="text">{{weatherxml.data.HeWeather5[0].now.wind.dir}}</text>
+    <text class="xinxi">{{weatherxml.data.HeWeather5[0].now.wind.sc}}级</text>
+  </view>
+  <view class="tiganwendu">
+    <image class="image" mode="aspectFit" src="../../image/wendu.png"></image>
+    <text class="text">体感温度</text>
+    <text class="xinxi">{{weatherxml.data.HeWeather5[0].now.fl}}°</text>
+  </view>
+  <view class="shidu">
+    <image class="image" mode="aspectFit" src="../../image/shidu.png"></image>
+    <text class="text">湿度</text>
+    <text class="xinxi">{{weatherxml.data.HeWeather5[0].now.hum}}％</text>
+  </view>
+  <view class="nengjiandu">
+    <image class="image" mode="aspectFit" src="../../image/nengjiandu.png"></image>
+    <text class="text">能见度</text>
+    <text class="xinxi">{{weatherxml.data.HeWeather5[0].now.vis}}千米</text>
+  </view>
+  <view class="ziwaixian">
+    <image class="image" mode="aspectFit" src="../../image/ziwaixian.png"></image>
+    <text class="text">紫外线</text>
+    <text class="xinxi">{{weatherxml.data.HeWeather5[0].suggestion.uv.brf}}</text>
+  </view>
+  <view class="qiya">
+    <image class="image" mode="aspectFit" src="../../image/qiya.png"></image>
+    <text class="text">气压</text>
+    <text class="xinxi">{{weatherxml.data.HeWeather5[0].now.pres}}百帕</text>
+  </view>
+</view>
+
+<view class="tip">
+  <view class="comf">
+    <block wx:if="{{weathersuccess}}">
+      <image src="../../image/{{weatherxml.data.HeWeather5[0].now.cond.code}}.png" mode="aspectFit" class="tip_image"></image>
+    </block>
+    <block wx:else>
+      <image src="../../image/999.png" mode="aspectFit" class="tip_image"></image>
+    </block>
+    <text class="tip_t">舒适度：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.comf.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.comf.txt}}</text>
+  </view>
+
+  <view class="cw">
+    <image src="../../image/xiche.png" mode="aspectFit" class="tip_image"></image>
+    <text class="tip_t">洗 车：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.cw.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.cw.txt}}</text>
+  </view>
+
+  <view class="drsg">
+
+    <image src="../../image/qiwen.png" mode="aspectFit" class="tip_image"></image>
+    <text class="tip_t">穿 衣：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.drsg.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.drsg.txt}}</text>
+  </view>
+
+  <view class="flu">
+    <image src="../../image/ganmao.png" mode="aspectFit" class="tip_image"></image>
+    <text class="tip_t">感 冒：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.flu.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.flu.txt}}</text>
+  </view>
+
+  <view class="sport">
+    <image src="../../image/jiangyu.png" mode="aspectFit" class="tip_image"></image>
+    <text class="tip_t">降 水：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.sport.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.sport.txt}}</text>
+  </view>
+
+  <view class="trav">
+    <image src="../../image/chuxing.png" mode="aspectFit" class="tip_image"></image>
+    <text class="tip_t">出 行：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.trav.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.trav.txt}}</text>
+  </view>
+
+  <view class="uv">
+    <image src="../../image/ziwaixian.png" mode="aspectFit" class="tip_image"></image>
+    <text class="tip_t">紫外线：</text>
+    <text class="tip_brf">{{weatherxml.data.HeWeather5[0].suggestion.uv.brf}}</text>
+    <text class="tip_txt">{{weatherxml.data.HeWeather5[0].suggestion.uv.txt}}</text>
+  </view>
+</view>

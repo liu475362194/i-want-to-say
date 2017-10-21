@@ -1,0 +1,8 @@
+<template name="view5">
+  <view class='view5_main'>
+  <text class='title'>我记得3D眼镜</text>
+  <text class='text_content'>我记得那场战狼2的电影，你和蔡凡单独定了两个电影票，和我们分开坐。你和我说你还少了两幅眼镜，我二话不说，到楼下骑了一辆共享单车就飞去电影院帮你买了两幅眼镜又飞回来，总共耗时才十分钟，大汗淋漓，但我不敢告诉你是买的，我怕你不接受。后来我想你应该猜到了，因为你一直留着，没有让我还回去。后面在搬家的时候我在你的行李里看到了那副眼镜，安静地躺在杂物里。</text>
+</view>
+<!-- <image src='../images/youxi.jpg' mode='aspectFit' class='image'></image> -->
+
+</template>

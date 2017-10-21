@@ -1,0 +1,12 @@
+/* pages/thank/thank.wxss */
+.block{
+  display: block;
+}
+.text_align_center{
+  text-align: center;
+}
+.text{
+  font-size: 30px;
+  font-family: "黑体"
+  
+}

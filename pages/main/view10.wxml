@@ -1,0 +1,8 @@
+<template name="view10">
+  <view class='view10_main'>
+  <text class='title'>我记得搬家</text>
+  <text class='text_content'>我记得9月23号，你又要搬家了，从老宿舍搬到福安公寓，10楼，我在7楼。还好我还可以和你在同一栋楼。我等你下班。你到七点多才回到宿舍，打包，运送，一直弄到晚上八点多。弄好了去吃顿饭。这是我第一次请你吃饭。真希望这样的机会还有好多。</text>
+</view>
+<image src='https://ip.freep.cn/591638/wx_camera_1506750417775.jpg' mode='aspectFit' class='image'></image>
+ <image src='https://ip.freep.cn/591638/IMG_20170930_134724.jpg' mode='aspectFit' class='image'></image> 
+</template>

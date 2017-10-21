@@ -1,0 +1,8 @@
+<template name="viewLast">
+
+<view class='mainLast_main'>
+  <text class='txt'>承蒙你出现</text>
+  <text class='txt'>够我喜欢好多年</text>
+</view>
+
+</template>

@@ -1,0 +1,6 @@
+<template name="view2">
+  <view class='view2_main'>
+  <text class='title'>我记得你的早餐</text>
+  <text class='text_content'>我记得你帮我买的早餐，那天下着小雨，我从宿舍门口把你带上，你去买早餐，但你发现我没有吃早餐，我说只需要一杯粥，你不但帮我买了粥，还帮我买了一个玉米，怕我吃不饱。那是我第一次把粥喝光的，玉米吃完的一次。很撑，很满足。</text>
+</view>
+</template>

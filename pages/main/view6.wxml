@@ -1,0 +1,8 @@
+<template name="view6">
+  <view class='view6_main'>
+  <text class='title'>我记得面包香蕉</text>
+  <text class='text_content'>我记得你给过我三个面包，一个是我去接你上班路上，两个在搬家过程中。在一天早上，我帮你买早餐，你给过我一根香蕉。</text>
+</view>
+<image src='https://ip.freep.cn/591638/mianbao.png' mode='aspectFit' class='image'></image>
+<image src='https://ip.freep.cn/591638/mianbao2.png' mode='aspectFit' class='image'></image>
+</template>

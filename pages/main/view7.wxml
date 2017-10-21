@@ -1,0 +1,8 @@
+<template name="view7">
+  <view class='view7_main'>
+  <text class='title'>我记得手机壳</text>
+  <text class='text_content'>我记得我送你的手机壳，美其名曰减压手机壳，我想你是很喜欢的，你和我聊天的时候我看得出你很开心，你说按了一天就变黑了😳。后来你还是用回了你自己的手机壳。最后你告诉我，后面那块胶掉了😔。</text>
+</view>
+<image src='https://ip.freep.cn/591638/shoujike.jpg' mode='aspectFit' class='image'></image>
+<!-- <image src='../images/mianbao2.png' mode='aspectFit' class='image'></image> -->
+</template>

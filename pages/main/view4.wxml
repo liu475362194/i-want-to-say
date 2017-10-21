@@ -1,0 +1,8 @@
+<template name="view4">
+  <view class='view4_main'>
+  <text class='title'>我记得游戏</text>
+  <text class='text_content'>我记得你在一个星期三晚上，向我介绍一款游戏，叫最囧游戏2，你说很难，我说我能一下子超过你的进度，你一开始不信，结果事实打脸，我成功通关了，只用了两个小时。你卡在了哄宝宝睡觉的那一关，我第二天去唱歌的路上帮你过了。一直到现在，我的手机都还装着这个游戏，尽管早早就通关了，尽管手机重置了，我又再一次通关了，只是少了你一起。</text>
+</view>
+<image src='https://ip.freep.cn/591638/youxi.png' mode='aspectFit' class='image'></image>
+
+</template>
