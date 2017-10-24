@@ -1,11 +1,16 @@
 <!--pages/main/main.wxml-->
 <view>
   <swiper class='swiper' style='height: {{height}}px;'>
-    <!-- <block wx:for="{{views}}">
+     <block wx:for="{{alltexts}}">
+        <swiper-item>
+        <scroll-view scroll-y="true" style="height: {{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+          <import src="view1.wxml" />
+          <template is="view1" data="{{...item}}"/>
+        </scroll-view>
+      </swiper-item>
+    </block> 
 
-    </block> -->
-
-    <swiper-item>
+    <!-- <swiper-item>
       <scroll-view scroll-y="true" style="height: {{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
         <import src="view1.wxml" />
         <template is="view1" />
@@ -72,13 +77,13 @@
         <import src="view10.wxml" />
         <template is="view10" />
       </scroll-view>
-    </swiper-item>
+    </swiper-item> -->
 
-    <swiper-item>
+     <swiper-item>
       <scroll-view scroll-y="true" style="height: {{height}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
         <import src="viewLast.wxml" />
         <template is="viewLast" />
       </scroll-view>
-    </swiper-item>
+    </swiper-item> 
   </swiper>
 </view>

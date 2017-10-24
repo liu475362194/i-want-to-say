@@ -1,6 +1,9 @@
 <!--pages/thank/thank.wxml-->
 <view class='text_align_center' style='margin-top: 30px;'>
-<text class='block text'>柳柳</text>
+<block wx:for="{{thank}}">
+        <text animation='{{text1}}' style='opacity:0' class='block text'>{{item}}</text>
+</block> 
+<!-- <text class='block text'>柳柳</text>
   <text animation='{{text1}}' style='opacity:0' class='block text'>我很开心</text>
   <text animation='{{text2}}' style='opacity:0' class='block text'>你终于看到了</text>
   <text animation='{{text3}}' style='opacity:0' class='block text'>这里面</text>
@@ -10,6 +13,6 @@
   <text animation='{{text7}}' style='opacity:0' class='block text'>把这些话永远保留</text>
   <text animation='{{text8}}' style='opacity:0' class='block text'>希望有一天</text>
   <text animation='{{text9}}' style='opacity:0' class='block text'>你终会看到</text>
-  <text animation='{{text10}}' style='opacity:0' class='block text'>那么，开始吧</text>
-  <button animation='{{text11}}' style='opacity:0; width:50%; margin-top: 30px;' bindtap='into' type='primary'>进入</button>
+  <text animation='{{text10}}' style='opacity:0' class='block text'>那么，开始吧</text> -->
+  <button animation='{{text1}}' style='opacity:0; width:50%; margin-top: 30px;' bindtap='into' type='primary'>进入</button>
 </view>

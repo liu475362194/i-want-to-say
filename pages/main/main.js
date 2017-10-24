@@ -1,5 +1,5 @@
 // pages/main/main.js
-
+var myres = null;
 Page({
 
   /**
@@ -13,14 +13,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/59dc8f48bee7e42ca1d66605/xcq/xiaochengxu',
+      success: res => {
+        myres = res.data
+        console.log(res.data)
+        console.log(res.data.mydata[0].alltexts)
+        that.init()
+        that.setData({
+          res: res.data,
+          alltexts:res.data.mydata[0].alltexts
+        })
+      }
+    })
   },
 
+  init: function (that) {
+    console.log(myres.mydata[0].main.names[0])
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
@@ -31,6 +47,7 @@ Page({
     this.setData({
       height: res.windowHeight
     })
+    
   },
 
   /**

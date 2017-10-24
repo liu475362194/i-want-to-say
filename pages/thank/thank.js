@@ -12,7 +12,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/59dc8f48bee7e42ca1d66605/xcq/xiaochengxu',
+      success: res => {
+        console.log(res.data)
+        console.log(res.data.mydata[0].alltexts)
+        that.setData({
+          thank: res.data.mydata[0].main.thank
+        })
+      }
+    })
   },
 
   /**
